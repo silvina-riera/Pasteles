@@ -1,13 +1,10 @@
-h2 {
-    padding: 20px;
-}
-
-img {
-    max-width: 400px;
-}
-
-p {
-    justify-self: center;
-    max-width: 500px;
-    padding: 10px;
-}
+ .productDetail {
+         display: flex;
+         flex-direction: column;
+         max-width: 24rem;
+         margin: 3rem auto;
+         padding: 1.5rem;
+         border: 1px solid #ddd;
+         border-radius: 8px;
+         gap: 16px;
+ }

@@ -21,7 +21,7 @@ const ProductDetail = () => {
         return <h2>Producto no encontrado.</h2>;
     }
     return (
-        <div>
+        <div className={styles.productDetail}>
             <h1>{product.name}</h1>
             <img src={product.image} alt={product.name} />
             <p>{product.description}</p>
