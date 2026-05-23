@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Juan Pérez",
+        "task": "Frontend Developer",
+        "emoji": "👨‍💻"
+    },
+    {
+        "id": 2,
+        "name": "Ana Gómez",
+        "task": "Diseadora UX/UI",
+        "emoji": "🎨"
+    },
+    {
+        "id": 3,
+        "name": "Carlos Ruiz",
+        "task": "Backend Developer",
+        "emoji": "👩‍💻"
+    }
+]

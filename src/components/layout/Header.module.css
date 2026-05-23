@@ -1,0 +1,23 @@
+.header {
+    background-color: #e28db7;
+    padding:10px;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+} 
+
+a:hover {
+    font-weight: bolder;
+}

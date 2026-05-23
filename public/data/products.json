@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1234,
+        "name": "Lemon Pie",
+        "price": 20000,
+        "stock": 6,
+        "image": "/images/lemon-pie.jpg",
+        "featured": false,
+        "description": "El Lemon Pie es un clásico de la pastelería internacional que destaca por su contraste irresistible. Combina una base de masa crujiente y mantecosa (generalmente tipo sablé), un relleno cremoso y vibrante de limón, y una cobertura etérea de merengue suave que se derrite en la boca."
+    },
+    {
+        "id": 1235,
+        "name": "Cheesecake",
+        "price": 30000,
+        "stock": 7,
+        "image": "/images/cheesecake.jpg",
+        "featured": true,
+        "description": "El cheesecake (o pastel de queso) es un postre exquisito que combina una base de galleta crujiente con un relleno suave, denso y cremoso. Suele presentarse frío o templado, coronado con mermeladas de frutos rojos, salsas dulces o chocolate, logrando un equilibrio perfecto entre dulzura y acidez."
+    },
+    {
+        "id": 1236,
+        "name": "Brownie",
+        "price": 35000,
+        "stock": 8,
+        "image": "/images/brownie.jpg",
+        "featured": true,
+        "description": "Un brownie es un bizcocho de chocolate clásico y denso de origen estadounidense. Se caracteriza por su corteza superior fina y crujiente, un interior húmedo y compacto (estilo fudgy), y un sabor a chocolate intenso y profundamente achocolatado."
+    },
+    {
+        "id": 1237,
+        "name": "Apple Pie ",
+        "price": 20000,
+        "stock": 10,
+        "image": "/images/apple-pie.jpg",
+        "featured": false,
+        "description": "El apple pie (tarta o pay de manzana) es el clásico postre estadounidense. Consiste en un crujiente molde de masa quebrada relleno con una generosa porción de manzanas fileteadas, azúcar, canela y manteca. Se hornea hasta dorar y suele servirse tibio, acompañado de helado de vainilla."
+    }
+]

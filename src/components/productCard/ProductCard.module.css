@@ -1,0 +1,13 @@
+.productCard {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.addToCart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}

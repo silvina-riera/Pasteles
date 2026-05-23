@@ -1,0 +1,13 @@
+h2 {
+    padding: 20px;
+}
+
+img {
+    max-width: 400px;
+}
+
+p {
+    justify-self: center;
+    max-width: 500px;
+    padding: 10px;
+}
