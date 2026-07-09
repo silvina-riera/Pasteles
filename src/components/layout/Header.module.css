@@ -1,23 +1,33 @@
 .header {
     background-color: #e28db7;
-    padding:10px;
+    padding: 10px;
 }
 
 ul {
-    list-style-type: none;
+    list-style: none;
     display: flex;
-    flex-direction: row;
-    justify-content:space-around;
+    justify-content: space-around;
     align-items: center;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
 }
 
 a {
     text-decoration: none;
     color: white;
     font-weight: 500;
-} 
+}
 
 a:hover {
     font-weight: bolder;
+}
+
+@media (max-width: 768px) {
+    ul {
+        flex-direction: column;
+        justify-content: center;
+        gap: 12px;
+    }
 }

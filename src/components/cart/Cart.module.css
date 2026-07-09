@@ -1,9 +1,9 @@
- .productsForm {
+.cart {
     display: flex;
     flex-direction: column;
 
     width: 100%;
-    max-width: 24rem;
+    max-width: 40rem;
 
     margin: 3rem auto;
     padding: 1.5rem;
@@ -13,12 +13,13 @@
     border: 1px solid #ddd;
     border-radius: 8px;
 
-    gap: 16px;
- }
+    gap: 1rem;
+}
 
-  @media (max-width: 768px) {
-    .productsForm {
+@media (max-width: 768px) {
+    .cart {
         margin: 1rem;
         padding: 1rem;
     }
 }
+

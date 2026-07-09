@@ -1,13 +1,22 @@
-/*.productCard {
+.traditionalProductCard {
     border: 1px solid #ccc;
     padding: 15px;
     border-radius: 8px;
     text-align: center;
+
+    box-sizing: border-box;
+
+    flex: 0 1 250px;
+    max-width: 250px;
 }
 
 .addToCart {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+
     margin: 10px 0;
-}*/
+    gap: 10px;
+}

@@ -1,0 +1,23 @@
+.productsTable {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 500px;
+    
+}
+
+.productsTable th,
+.productsTable td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.productsTable th {
+    font-weight: bold;
+    background-color: #f5f5f5;
+}
+
+.tableContainer {
+    width: 100%;
+    overflow-x: auto;
+}

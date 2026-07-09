@@ -1,4 +1,4 @@
- .productDetail {
+ /*.productDetail {
          display: flex;
          flex-direction: column;
          max-width: 24rem;
@@ -7,4 +7,4 @@
          border: 1px solid #ddd;
          border-radius: 8px;
          gap: 16px;
- }
+ }*/

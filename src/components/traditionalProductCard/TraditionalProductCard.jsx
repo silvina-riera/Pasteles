@@ -1,10 +1,10 @@
-/*import { useState } from 'react';
-import styles from './ProductCard.module.css';
+import { useState } from 'react';
+import styles from './TraditionalProductCard.module.css';
 import { Link } from 'react-router-dom';
 import { useCart } from '../../context/CartContext';
 
 
-export function ProductCard({ id, name, price, stock, image }) {
+export function TraditionalProductCard({ id, name, price, stock, image, description, showDescription = false, showDetailLink = true }) {
     const product = { id, name, price, stock, image };
     const { addToCart, getActualQuantity } = useCart();
     const [units, setUnits] = useState(0);
@@ -16,24 +16,36 @@ export function ProductCard({ id, name, price, stock, image }) {
         }
     };
     const decrease = () => {
-        if (units > 1) {
+        if (units >= 1) {
             setUnits(units - 1);
         }
     };
 
 
     const handleAddToCart = () => {
+        if (units === 0) {
+            alert("Seleccione al menos una unidad.");
+            return;
+        }
+
         addToCart(product, units);
         alert(`Agregaste ${units} unidades de ${name} al carrito.`);
     };
 
     return (
-        <div className={styles.productCard}>
+        <div className={styles.traditionalProductCard}>
             <h3>{name}</h3>
             <img src={image} alt={name} width="150" />
             <p>Precio: ${price}</p>
             <p>Stock disponible: {stock}</p>
-            <Link to={`/producto/${id}`}>Ver detalle</Link>
+            {showDescription && description && (
+                <p>{description}</p>
+            )}
+            {showDetailLink && (
+                <Link to={`/producto-tradicional/${id}`}>
+                    Ver detalle
+                </Link>
+            )}
             <div className={styles.addToCart}>
                 <button onClick={decrease}>-</button>
                 <p style={{ margin: '0 10px' }}>{units}</p>
@@ -42,11 +54,11 @@ export function ProductCard({ id, name, price, stock, image }) {
             {actualQuantity > 0 && (
             <p style={{ fontWeight: 'bold' }}>{actualQuantity} unidades en el Carrito</p>
             )}
-            <button onClick={handleAddToCart}>Agregar {units} al Carrito</button>
+            <button onClick={handleAddToCart} disabled={units === 0}>Agregar {units} al Carrito</button>
         </div>
     );
 }
 
-export default ProductCard;*/
+export default TraditionalProductCard;
 
 

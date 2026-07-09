@@ -1,44 +1,28 @@
 /*import React, { useState } from 'react';
 import { ProductsForm } from './ProductsForm';
-import { getFirestore, collection, addDoc } from 'firebase/firestore';
+
 
 export function ContainerForm() {
-      const initialForm = {
-        id: '',
+    const [dataForm, setDataForm] = useState({
         name: '',
         price: '',
         stock: '',
-        image: '',
-        description: '',
-        featured: false,
-        category: ''
-    };
-
-    const [dataForm, setDataForm] = useState(initialForm); 
+    });
 
     const [imageFile, setImageFile] = useState(null);
 
-    const [loading, setLoading] = useState(false);
-
     const adminChange = (event) => {
-        const { name, value, type, checked } = event.target;
-
-        const numberFields = ['id', 'price', 'stock'];
-
+        const { name, value } = event.target;
         setDataForm({
             ...dataForm,
-            [name]:
-                type === 'checkbox'
-                    ? checked
-                    : numberFields.includes(name)
-                        ? Number(value)
-                        : value
+            [name]: value
         });
     };
 
     const adminImageChange = (event) => {
-        setImageFile(event.target.files[0]); 
-    }; 
+        setImageFile(event.target.files[0]);
+    };
+
 
     const adminSend = async (event) => {
         event.preventDefault();
@@ -46,63 +30,33 @@ export function ContainerForm() {
             alert("Por favor, selecciona una imagen para el producto.");
             return;
         }
-
-        setLoading(true);
-        console.log("Loading...");
-
         const apiKey = '22aaac7be12a0512e7d42e166c4f5c15';
         const formData = new FormData();
         formData.append('image', imageFile);
-
         try {
             console.log("Subiendo imagen a Imgbb...");
-
             const answerImgbb = await
                 fetch(`https://api.imgbb.com/1/upload?key=${apiKey}`, {
                     method: 'POST',
                     body: formData,
                 });
-
             const dataImgbb = await answerImgbb.json();
-
             if (dataImgbb.success) {
                 console.log("Imagen subida con éxito. URL:", dataImgbb.data.url);
-                const productComplete = {
+
+                const completeProduct = {
                     ...dataForm,
-                    image: dataImgbb.data.url
+                    urlImage: dataImgbb.data.url
                 };
-
-                console.log('Enviando producto a Firebase:',
-                    productComplete);
-
-                const db = getFirestore();
-
-                const productsCollection = collection(db, "products");
-
-                await addDoc(productsCollection, productComplete);
-
-                alert("Producto cargado");
-                setDataForm(initialForm);
-
-
+                console.log('Enviando los siguientes datos COMPLETOS a la API:', completeProduct);
             } else {
                 throw new Error('La subida de la imagen a Imgbb falló.');
             }
-
         } catch (error) {
             console.error("Error en el proceso de envío:", error);
-            alert("Hubo un error al subir la imagen. Por favor, intentá de nuevo.");
+            alert("Hubo un error al subir la imagen. Por favor, intentá denuevo.");
         }
-
-        finally {
-
-            setLoading(false);
-        }
-
-
-
-    }; 
-
+    };
 
     return (
         <ProductsForm

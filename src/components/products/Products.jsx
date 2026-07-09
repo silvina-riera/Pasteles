@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+/*import React, { useState, useEffect } from 'react';
 import { ProductCard } from "../productCard/ProductCard";
 import styles from './Products.module.css';
 
@@ -50,4 +50,4 @@ function Products({ Message, featured = false }) {
     );
 }
 
-export default Products;
+export default Products;*/

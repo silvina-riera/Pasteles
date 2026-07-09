@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import styles from './Users.module.css';
-import { getFirestore, collection, getDocs } from 'firebase/firestore';
-import { db } from '../../firebase/config';
 
 function Users() {
     const [users, setUsers] = useState([]);
@@ -9,16 +7,23 @@ function Users() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-            const usersDB = collection(db, "users")
-            getDocs(usersDB).then((resp) => {
-                setUsers(
-                    resp.docs.map((doc) => {
-                        return { ...doc.data() }
-                    })
-                );
-                setLoading(false);
+        fetch('/data/users.json')
+            .then((answer) => {
+                if (!answer.ok) {
+                    throw new Error('No se pudo cargar la información de los usuarios');
+                }
+                return answer.json();
             })
-        }, []);
+            .then((data) => {
+                setUsers(data);
+            })
+            .catch((error) => {
+                setError(error.message);
+            })
+            .finally(() => {
+                setLoading(false);
+            });
+    }, []);
     if (loading) {
         return <p>Cargando usuarios, por favor espere...</p>;
     }

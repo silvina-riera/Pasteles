@@ -1,24 +1,16 @@
- .productsForm {
+.register {
     display: flex;
     flex-direction: column;
 
     width: 100%;
     max-width: 24rem;
+    box-sizing: border-box;
 
     margin: 3rem auto;
     padding: 1.5rem;
 
-    box-sizing: border-box;
-
     border: 1px solid #ddd;
     border-radius: 8px;
 
-    gap: 16px;
- }
-
-  @media (max-width: 768px) {
-    .productsForm {
-        margin: 1rem;
-        padding: 1rem;
-    }
+    gap: 1rem;
 }

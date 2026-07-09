@@ -1,4 +1,4 @@
- .productsForm {
+.traditionalProductDetail {
     display: flex;
     flex-direction: column;
 
@@ -10,14 +10,11 @@
 
     box-sizing: border-box;
 
-    border: 1px solid #ddd;
-    border-radius: 8px;
-
     gap: 16px;
- }
+}
 
-  @media (max-width: 768px) {
-    .productsForm {
+@media (max-width: 768px) {
+    .traditionalProductDetail {
         margin: 1rem;
         padding: 1rem;
     }

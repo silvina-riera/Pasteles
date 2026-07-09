@@ -1,17 +1,31 @@
 .users {
-    list-style-type: none;
+    list-style: none;
+
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-items: center;
-    padding: 2rem;
+    align-items: stretch;
+
+    flex-wrap: wrap;
     gap: 20px;
-    
+
+    padding: 2rem;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .users {
+        padding: 1rem;
+    }
 }
 
 .usersCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     border: 1px solid #ccc;
     padding: 15px;
     border-radius: 8px;
     text-align: center;
+    box-sizing: border-box;
+    width: 250px;
 }
