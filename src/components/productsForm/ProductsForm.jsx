@@ -10,7 +10,7 @@ export function ProductsForm({ dataForm, adminChange, adminSend, adminImageChang
                 ? "Editar Producto"
                 : "Agregar Nuevo Producto"}</h3>
             <div>
-                <label>Id:</label>
+                <label>Id: </label>
                 <input
                     type="number"
                     placeholder="Ej: 8888"
@@ -20,7 +20,7 @@ export function ProductsForm({ dataForm, adminChange, adminSend, adminImageChang
                 />
             </div>
             <div>
-                <label>Nombre del Producto:</label>
+                <label>Nombre del Producto: </label>
                 <input
                     type="text"
                     placeholder="Ej: Black Forest"
@@ -40,7 +40,7 @@ export function ProductsForm({ dataForm, adminChange, adminSend, adminImageChang
                 />
             </div>
             <div>
-                <label>Stock:</label>
+                <label>Stock: </label>
                 <input
                     type="number"
                     placeholder="Ej: 6"
@@ -50,7 +50,7 @@ export function ProductsForm({ dataForm, adminChange, adminSend, adminImageChang
                 />
             </div>
             <div>
-                <label>Descripción:</label>
+                <label>Descripción: </label>
                 <input
                     type="text"
                     placeholder="Ej: Chocolate intenso..."
@@ -60,7 +60,7 @@ export function ProductsForm({ dataForm, adminChange, adminSend, adminImageChang
                 />
             </div>
             <div>
-                <label>Categoría:</label>
+                <label>Categoría: </label>
                 <input
                     type="text"
                     placeholder="Ej: Tradicionales"
@@ -70,7 +70,7 @@ export function ProductsForm({ dataForm, adminChange, adminSend, adminImageChang
                 />
             </div>
             <div>
-                <label>Destacado:</label>
+                <label>Destacado: </label>
                 <input
                     type= "checkbox"
                     name="featured"
@@ -79,7 +79,7 @@ export function ProductsForm({ dataForm, adminChange, adminSend, adminImageChang
                 />
             </div>
             <div>
-                <label>Imagen:</label>
+                <label>Imagen: </label>
                 <input
                     type="file"
                     placeholder="https://…"
