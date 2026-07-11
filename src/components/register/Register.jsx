@@ -38,7 +38,7 @@ const Register = () => {
             <form onSubmit={adminSubmit} className={styles.register}>
                 <h2>Crear una nueva cuenta</h2>
                 <div>
-                    <label>Correo Electrónico</label>
+                    <label>Correo Electrónico: </label>
                     <input
                         type="email"
                         value={email}
@@ -48,7 +48,7 @@ const Register = () => {
                     />
                 </div>
                 <div>
-                    <label>Contraseña</label>
+                    <label>Contraseña: </label>
                     <input
                         type="password"
                         value={password}
